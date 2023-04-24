@@ -54,8 +54,9 @@ class ImageViewController: UIViewController {
 		let renderer = UIGraphicsImageRenderer(size: original.size)
 
 		let rounded = renderer.image { ctx in
-			ctx.cgContext.addEllipse(in: CGRect(origin: CGPoint.zero, size: original.size))
-			ctx.cgContext.closePath()
+
+            ctx.cgContext.addEllipse(in: CGRect(origin: CGPoint.zero, size: original.size))
+            ctx.cgContext.closePath()
 
 			original.draw(at: CGPoint.zero)
 		}
